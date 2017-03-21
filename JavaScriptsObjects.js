@@ -10,6 +10,10 @@ var Person = function (name , age , city) {
   }
 }
 
+/*
+* New key word cretes a new Object Simielar to java
+* & Person Function in thias case acts as an class
+*/
 var Person1 = new Person('Chaitanya', '25', 'Satara')
 Person1.getPerson()
 
@@ -32,10 +36,10 @@ var FactoryPerson = function (name , age , city) {
 }
 
 // Not Sure about how the new key Word Works as of ###### Mon Jan 9 01:10:36 IST 2017
-var FactoryPerson1 = new FactoryPerson('Chaitanya', '25', 'Satara')
+var FactoryPerson1 = FactoryPerson('Chaitanya', '25', 'Satara')
 FactoryPerson1.getPerson()
 
-var FactoryPerson2 = new FactoryPerson('Mayur', '25', 'Satara')
+var FactoryPerson2 = FactoryPerson('Mayur', '25', 'Satara')
 FactoryPerson2.getPerson()
 
 // @prototype Patterns
@@ -46,8 +50,9 @@ var PrototypePerson = function () {}
 PrototypePerson.prototype.name = 'no name'
 PrototypePerson.prototype.age = '0'
 PrototypePerson.prototype.city = 'no city'
+// Here 'this' can acees the values of the curent object 
 PrototypePerson.prototype.getPerson = function () {
-  console.log(temp.name + ' ' + temp.city + ' ' + temp.age)
+  console.log(this.name + ' ' + this.city + ' ' + this.age)
 }
 
 var PrototypePerson1 = new PrototypePerson()
@@ -80,8 +85,8 @@ var DynamicPrototypePattern = function (name , age , city) {
   // This Checks if the fucntion is already attched to the prototype (i.e. Shared Memory ) 
   // it avoids creation of the Object
   if (this.getPerson.typeOf != 'function') {
-    this.prototype.getPerson = function () {
-      console.log(temp.name + ' ' + temp.city + ' ' + temp.age)
+    DynamicPrototypePattern.prototype.getPerson = function () {
+      console.log(this.name + ' ' + this.city + ' ' + this.age)
     }
   }
 }
@@ -89,5 +94,5 @@ var DynamicPrototypePattern = function (name , age , city) {
 var DynamicPrototypePatternPerson1 = new DynamicPrototypePattern('Chaitanya', '25', 'Satara')
 DynamicPrototypePatternPerson1.getPerson()
 
-var DynamicPrototypePatternPerson2 = new DynamicPrototypePatternPerson2('Mayur', '25', 'Satara')
+var DynamicPrototypePatternPerson2 = new DynamicPrototypePatternPerson('Mayur', '25', 'Satara')
 DynamicPrototypePatternPerson2.getPerson()
