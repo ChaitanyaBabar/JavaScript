@@ -13,6 +13,7 @@ var Person = function (name , age , city) {
 /*
 * New key word cretes a new Object Simielar to java
 * & Person Function in thias case acts as an class
+* This is called instantiation
 */
 var Person1 = new Person('Chaitanya', '25', 'Satara')
 Person1.getPerson()
@@ -36,10 +37,11 @@ var FactoryPerson = function (name , age , city) {
 }
 
 // Not Sure about how the new key Word Works as of ###### Mon Jan 9 01:10:36 IST 2017
-var FactoryPerson1 = FactoryPerson('Chaitanya', '25', 'Satara')
+// Works as it creates a new Instance of the FactoryPerson
+var FactoryPerson1 = new FactoryPerson('Chaitanya', '25', 'Satara')
 FactoryPerson1.getPerson()
 
-var FactoryPerson2 = FactoryPerson('Mayur', '25', 'Satara')
+var FactoryPerson2 = new FactoryPerson('Mayur', '25', 'Satara')
 FactoryPerson2.getPerson()
 
 // @prototype Patterns
