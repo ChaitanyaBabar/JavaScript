@@ -1,20 +1,20 @@
 // @Object Creation Patterns
 // @Contructor Patterns
-var Person = function (name , age , city) {
-  this.name = name
-  this.age = age
-  this.city = city
+var Person = function(name, age, city) {
+    this.name = name
+    this.age = age
+    this.city = city
 
-  this.getPerson = function () {
-    console.log(this.name + ' ' + this.city + ' ' + this.age)
-  }
+    this.getPerson = function() {
+        console.log(this.name + ' ' + this.city + ' ' + this.age)
+    }
 }
 
 /*
-* New key word cretes a new Object Simielar to java
-* & Person Function in thias case acts as an class
-* This is called instantiation
-*/
+ * New key word cretes a new Object Simielar to java
+ * & Person Function in thias case acts as an class
+ * This is called instantiation
+ */
 var Person1 = new Person('Chaitanya', '25', 'Satara')
 Person1.getPerson()
 
@@ -22,18 +22,18 @@ var Person2 = new Person('Mayur', '25', 'Satara')
 Person2.getPerson()
 
 // @Factory Patterns
-var FactoryPerson = function (name , age , city) {
-  var temp = {}
-  // or var temp = new Object()
+var FactoryPerson = function(name, age, city) {
+    var temp = {}
+        // or var temp = new Object()
 
-  temp.name = name
-  temp.age = age
-  temp.city = city
+    temp.name = name
+    temp.age = age
+    temp.city = city
 
-  temp.getPerson = function () {
-    console.log(temp.name + ' ' + temp.city + ' ' + temp.age)
-  }
-  return temp
+    temp.getPerson = function() {
+        console.log(temp.name + ' ' + temp.city + ' ' + temp.age)
+    }
+    return temp
 }
 
 // Not Sure about how the new key Word Works as of ###### Mon Jan 9 01:10:36 IST 2017
@@ -47,14 +47,14 @@ FactoryPerson2.getPerson()
 // @prototype Patterns
 
 // All the JavaScript Functions & JavaScripts Objects have Some Shared Space in prototype
-var PrototypePerson = function () {}
+var PrototypePerson = function() {}
 
 PrototypePerson.prototype.name = 'no name'
 PrototypePerson.prototype.age = '0'
 PrototypePerson.prototype.city = 'no city'
-// Here 'this' can acees the values of the curent object 
-PrototypePerson.prototype.getPerson = function () {
-  console.log(this.name + ' ' + this.city + ' ' + this.age)
+    // Here 'this' can acees the values of the curent object 
+PrototypePerson.prototype.getPerson = function() {
+    console.log(this.name + ' ' + this.city + ' ' + this.age)
 }
 
 var PrototypePerson1 = new PrototypePerson()
@@ -79,18 +79,18 @@ PrototypePerson1.getPerson()
 // Both the Problems i.e ease of creation of the Object & Formation of the heavy Object
 // handled using @Dynamic Prototype Pattern
 
-var DynamicPrototypePattern = function (name , age , city) {
-  this.name = name
-  this.age = age
-  this.city = city
+var DynamicPrototypePattern = function(name, age, city) {
+    this.name = name
+    this.age = age
+    this.city = city
 
-  // This Checks if the fucntion is already attched to the prototype (i.e. Shared Memory ) 
-  // it avoids creation of the Object
-  if (this.getPerson.typeOf != 'function') {
-    DynamicPrototypePattern.prototype.getPerson = function () {
-      console.log(this.name + ' ' + this.city + ' ' + this.age)
+    // This Checks if the fucntion is already attched to the prototype (i.e. Shared Memory ) 
+    // it avoids creation of the Object
+    if (this.getPerson.typeOf != 'function') {
+        DynamicPrototypePattern.prototype.getPerson = function() {
+            console.log(this.name + ' ' + this.city + ' ' + this.age)
+        }
     }
-  }
 }
 
 var DynamicPrototypePatternPerson1 = new DynamicPrototypePattern('Chaitanya', '25', 'Satara')
