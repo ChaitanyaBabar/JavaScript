@@ -24,7 +24,7 @@ function getName() {
     return this.name;
 }
 // Advantage of doing Function Decalration over 
-//Function Expression is the Function declaration is hoisted :)
+//Function Expression is the Function declaration is hoisted  :)
 
 var stud1 = {
     name: 'John',
