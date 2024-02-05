@@ -16,7 +16,7 @@ Person1.getPerson()
 var Person2 = new Person('Mayur', '25', 'Satara')
 Person2.getPerson()
 
-// @Factory Patterns
+// @Factory Pattern
 var FactoryPerson = function (name , age , city) {
   var temp = {}
   // or var temp = new Object()
