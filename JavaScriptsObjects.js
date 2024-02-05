@@ -25,6 +25,10 @@ Person2.getPerson()
 var FactoryPerson = function(name, age, city) {
     var temp = {}
         // or var temp = new Object()
+// @Factory Pattern
+var FactoryPerson = function (name , age , city) {
+  var temp = {}
+  // or var temp = new Object()
 
     temp.name = name
     temp.age = age
