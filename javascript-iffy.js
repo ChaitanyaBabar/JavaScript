@@ -23,7 +23,7 @@ var getName = function() { // Function can be assigned to the variables
 function getName() {
     return this.name;
 }
-// Advantage of doing Function Decalration over
+// Advantage of doing Function Decalration over 
 //Function Expression is the Function declaration is hoisted  :)
 
 var stud1 = {
